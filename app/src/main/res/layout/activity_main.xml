@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".activities.MainActivity"
     android:padding="10dp">
 
 
@@ -23,9 +23,8 @@
         android:id="@+id/etUserMessage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="230dp"
-        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="407dp"
         android:hint="Enter your Message" />
 
     <Button
@@ -47,4 +46,15 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="128dp"
         android:text="Share To Other Apps" />
+
+    <Button
+        android:id="@+id/btnRecyclerViewDemo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="127dp"
+        android:layout_marginBottom="47dp"
+        android:text="Recycler View Demo" />
+
 </RelativeLayout>
