@@ -12,8 +12,16 @@ class SecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
 
+
+//        Null Safety Operators
+//          a.) Safe Call   ?.
+//            b.) Safe Call with let    ?.let {   }
+
         val bundle: Bundle? = intent.extras
-        val msg = bundle!!.getString("user_message")
+
+        bundle?.let {
+
+            val msg = bundle.getString("user_message")
 
 //        this part below uses the extension function
 //        henxe should reduce boilerplate code. It however requires using of null exception to work.
@@ -21,12 +29,18 @@ class SecondActivity : AppCompatActivity() {
 
 //        showToast(msg)
 
+
+//            showToast(msg)
+
         if (msg != null) {
             showToast(msg)
         }
+
 //        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
 
-        txvUserMessage.text = msg
+            txvUserMessage.text = msg
+
+        }
 
     }
 }
